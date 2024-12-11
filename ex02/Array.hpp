@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 19:32:00 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/12/11 15:03:16 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:09:23 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ Array<T>::Array() : _size(0), _values(nullptr)
 }
 
 template<typename T>
-Array<T>::Array(unsigned int size) : _size(size), _values(std::make_unique<T[]>(size))
+Array<T>::Array(unsigned int newsize) : _size(newsize), _values(new T[newsize])
 {
 }
 
 template<typename T>
-Array<T>::Array(const Array& other) : _size(other.size()), _values(std::make_unique<T[]>(other.size()))
+Array<T>::Array(const Array& other) : _size(other.size()), _values(new T[other.size()])
 {
 	for (unsigned int i = 0; i < other.size(); i++)
 	{
@@ -52,7 +52,7 @@ template<typename T>
 Array<T>& Array<T>::operator=(const Array& other)
 {
 	_size = other.size();
-	_values = (std::make_unique<T[]>(other.size()));
+	_values = new T[_size];
 	for (unsigned int i = 0; i < other.size(); i++)
 	{
 		(*this)[i] = other._values[i];

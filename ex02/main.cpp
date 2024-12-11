@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 19:31:10 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/12/11 15:03:39 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:11:09 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main(void)
 	
 	Array<int> arr2(arr);
 	arr2[0]++;
+	std::cout << "Size of arr: " << arr.size() << std::endl;
 	std::cout << "arr[0]: " << arr[0] << " arr2[0]: " << arr2[0] << std::endl;
 	try
 	{
