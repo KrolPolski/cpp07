@@ -6,10 +6,11 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 19:32:00 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/12/11 15:09:23 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:20:21 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <memory>
 #include <stdexcept>
 template <typename T>
